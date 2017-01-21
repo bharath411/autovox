@@ -5,6 +5,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.base.BaseSetup;
+import com.shopvox.commons.enums.MenuItems;
 import com.shopvox.pageobjects.AdminDashBoardPage;
 import com.shopvox.pageobjects.AdminLoginPage;
 import com.shopvox.pageobjects.HomePage;
@@ -29,12 +30,11 @@ public class OpenCart extends BaseSetup {
 	
 	@Test
 	public void testProductAdd(){
-		
 		//navigate to admin page
 		homePage.navigateToAdminLoginPage();
 		//Login to admin application
 		adminLoginPage.login("user", "user123");
 		//click on product
-		adminDashBoardPage.openMenuItem("Catalog", "Products");
+		adminDashBoardPage.openMenuItem(MenuItems.PRODUCTS);
 	}
 }
